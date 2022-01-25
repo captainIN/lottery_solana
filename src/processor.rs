@@ -35,7 +35,7 @@ impl Processor {
 
                 let lottery_ai = next_account_info(accounts_iter)?;
                 let mut lottery_box = LotteryBox::try_from_slice(&lottery_ai.data.borrow())?;
-                // lottery_box.participants = [*manager_ai.owner; 8];
+                lottery_box.participants = [*lottery_ai.owner; 8];
                 lottery_box.pool_size = 0.0;
                 lottery_box.base_fee = 1.0;
                 msg!("lottery_box = {:#?}", lottery_box);

@@ -55,9 +55,9 @@ const main = async () => {
             fromPubkey: feePayer.publicKey,
             newAccountPubkey: lotteryKey,
             /** Amount of lamports to transfer to the created account */
-            lamports: await connection.getMinimumBalanceForRentExemption(16),
+            lamports: await connection.getMinimumBalanceForRentExemption(272),
             /** Amount of space in bytes to allocate to the created account */
-            space: 16,
+            space: 272,
             /** Public key of the program to assign as the owner of the created account */
             programId: programId,
         });

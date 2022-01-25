@@ -10,7 +10,7 @@ pub struct Manager {
 
 #[derive(BorshSerialize, BorshDeserialize, Debug)]
 pub struct LotteryBox {
-    // pub participants: [Pubkey; 8],
+    pub participants: [Pubkey; 8],
     pub pool_size: f64,
     pub base_fee: f64,
 }
